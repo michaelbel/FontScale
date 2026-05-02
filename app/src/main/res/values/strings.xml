@@ -1,5 +1,3 @@
 <resources>
-    <string name="app_name">BuildApp</string>
-    <string name="get_account_info">Get Account Info</string>
-    <string name="error_enter_username">Error: enter username please</string>
+    <string name="app_name">My Application</string>
 </resources>
