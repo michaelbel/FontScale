@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">FontScale</string>
+    <string name="section_current_title">Текущий масштаб</string>
+    <string name="current_font_scale_value">LocalDensity.fontScale = %1$.2f</string>
+    <string name="current_font_scale_hint">Открой системные настройки размера текста или Preview с fontScale = 1.5f / 2.0f и проверь, что экран остается доступным.</string>
+    <string name="section_flexible_title">Гибкие контейнеры</string>
+    <string name="section_flexible_body">Кнопки, поля ввода и карточки не должны иметь жесткую высоту, если внутри есть текст. Минимальную высоту задавай через heightIn, а контенту оставляй место расти.</string>
+    <string name="primary_action">Кнопка с длинным текстом и гибкой высотой</string>
+    <string name="text_field_label">Комментарий</string>
+    <string name="text_field_initial">Большой системный шрифт делает поле выше. Если ограничить TextField фиксированной высотой, ввод быстро станет неудобным.</string>
+    <string name="section_flow_title">Перенос действий</string>
+    <string name="section_flow_body">Несколько кнопок в Row легко перестают помещаться по ширине. FlowRow переносит элементы на следующую строку.</string>
+    <string name="flow_action_save">Сохранить изменения</string>
+    <string name="flow_action_share">Поделиться отчетом</string>
+    <string name="flow_action_export">Экспортировать данные</string>
+    <string name="flow_action_archive">Архивировать выбранное</string>
+    <string name="section_row_title">Стабильные элементы в Row</string>
+    <string name="section_row_body">Длинный текст должен занимать доступное место, но не выталкивать счетчик или иконку за край экрана.</string>
+    <string name="row_long_text">Очень длинное название настройки, которое при fontScale 200% должно переноситься и не ломать соседний бейдж</string>
+    <string name="row_badge">24</string>
+    <string name="section_marquee_title">Одна строка</string>
+    <string name="section_marquee_body">Если maxLines = 1 неизбежен, нужно заранее решить, как пользователь увидит полный текст. Один из вариантов - basicMarquee.</string>
+    <string name="marquee_text">Очень длинный заголовок вкладки или кнопки, который не помещается на экране при увеличенном fontScale</string>
+    <string name="section_limited_title">Локальный лимит fontScale</string>
+    <string name="section_limited_body">Этот блок ограничивает рост текста до 1.15f через CompositionLocalProvider. Это спорно с точки зрения доступности, но иногда помогает сохранить рабочий UI.</string>
+    <string name="limited_font_scale_value">Внутри блока fontScale = %1$.2f</string>
+    <string name="limited_action">Текст внутри ограниченной density</string>
 </resources>

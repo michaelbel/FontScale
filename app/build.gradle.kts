@@ -4,9 +4,12 @@ plugins {
 }
 
 private val gitCommitsCount: Int by lazy {
-    ProcessBuilder("git", "rev-list", "--count", "HEAD")
-        .redirectErrorStream(true)
-        .start().inputStream.bufferedReader().readLine().trim().toInt()
+    runCatching {
+        ProcessBuilder("git", "rev-list", "--count", "HEAD")
+            .directory(rootDir)
+            .redirectErrorStream(true)
+            .start().inputStream.bufferedReader().readLine().trim().toInt()
+    }.getOrDefault(1)
 }
 
 kotlin {
@@ -14,11 +17,11 @@ kotlin {
 }
 
 android {
-    namespace = "org.michaelbel.constraintlayout"
+    namespace = "org.michaelbel.fontscale"
     compileSdk = libs.versions.compile.sdk.get().toInt()
 
     defaultConfig {
-        applicationId = "org.michaelbel.constraintlayout"
+        applicationId = "org.michaelbel.fontscale"
         minSdk = libs.versions.min.sdk.get().toInt()
         targetSdk = libs.versions.target.sdk.get().toInt()
         versionCode = gitCommitsCount
@@ -46,13 +49,15 @@ android {
 }
 
 base {
-    archivesName.set("MyApplication-v${android.defaultConfig.versionName}(${android.defaultConfig.versionCode})")
+    archivesName.set("FontScale-v${android.defaultConfig.versionName}(${android.defaultConfig.versionCode})")
 }
 
 dependencies {
     implementation(libs.google.material)
     implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.splashscreen)
     debugImplementation(libs.androidx.compose.ui.tooling)
 }

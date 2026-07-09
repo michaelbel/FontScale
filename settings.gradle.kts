@@ -22,5 +22,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ConstraintLayout"
+rootProject.name = "FontScale"
 include(":app")
