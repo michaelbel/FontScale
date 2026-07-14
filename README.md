@@ -5,7 +5,17 @@
 
 Android-пример про адаптацию Compose UI к увеличенному системному размеру текста.
 
-<img src=".github/app.gif" alt="" width="25%"/>
+<p>
+  <img src=".github/1.gif" alt="" width="24%"/>
+  <img src=".github/2.gif" alt="" width="24%"/>
+  <img src=".github/3.gif" alt="" width="24%"/>
+  <img src=".github/4.gif" alt="" width="24%"/>
+</p>
+<p>
+  <img src=".github/5.gif" alt="" width="24%"/>
+  <img src=".github/6.gif" alt="" width="24%"/>
+  <img src=".github/7.gif" alt="" width="24%"/>
+</p>
 
 ## Samples
 
