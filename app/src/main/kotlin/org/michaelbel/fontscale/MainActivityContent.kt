@@ -53,6 +53,7 @@ import org.michaelbel.fontscale.sample04_WeightFill.Sample04App
 import org.michaelbel.fontscale.sample05_BasicMarquee.Sample05App
 import org.michaelbel.fontscale.sample06_FontScaleLimit.Sample06App
 import org.michaelbel.fontscale.sample07_TextAutoSize.Sample07App
+import org.michaelbel.fontscale.sample08_ScalableContent.Sample08App
 
 @Composable
 fun MainActivityContent() {
@@ -96,6 +97,7 @@ fun MainActivityContent() {
                                     4 -> "BasicMarquee"
                                     5 -> "FontScaleLimit"
                                     6 -> "TextAutoSize"
+                                    7 -> "ScalableContent"
                                     else -> stringResource(R.string.app_name)
                                 }
                             )
@@ -175,7 +177,7 @@ fun MainActivityContent() {
                     item {
                         SegmentedListItem(
                             onClick = { selectedSample = 0 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 0, count = 7),
+                            shapes = ListItemDefaults.segmentedShapes(index = 0, count = 8),
                             colors = ListItemDefaults.segmentedColors(
                                 containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                             )
@@ -187,7 +189,7 @@ fun MainActivityContent() {
                     item {
                         SegmentedListItem(
                             onClick = { selectedSample = 1 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 1, count = 7),
+                            shapes = ListItemDefaults.segmentedShapes(index = 1, count = 8),
                             colors = ListItemDefaults.segmentedColors(
                                 containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                             )
@@ -199,7 +201,7 @@ fun MainActivityContent() {
                     item {
                         SegmentedListItem(
                             onClick = { selectedSample = 2 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 2, count = 7),
+                            shapes = ListItemDefaults.segmentedShapes(index = 2, count = 8),
                             colors = ListItemDefaults.segmentedColors(
                                 containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                             )
@@ -211,7 +213,7 @@ fun MainActivityContent() {
                     item {
                         SegmentedListItem(
                             onClick = { selectedSample = 3 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 3, count = 7),
+                            shapes = ListItemDefaults.segmentedShapes(index = 3, count = 8),
                             colors = ListItemDefaults.segmentedColors(
                                 containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                             )
@@ -223,7 +225,7 @@ fun MainActivityContent() {
                     item {
                         SegmentedListItem(
                             onClick = { selectedSample = 4 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 4, count = 7),
+                            shapes = ListItemDefaults.segmentedShapes(index = 4, count = 8),
                             colors = ListItemDefaults.segmentedColors(
                                 containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                             )
@@ -235,7 +237,7 @@ fun MainActivityContent() {
                     item {
                         SegmentedListItem(
                             onClick = { selectedSample = 5 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 5, count = 7),
+                            shapes = ListItemDefaults.segmentedShapes(index = 5, count = 8),
                             colors = ListItemDefaults.segmentedColors(
                                 containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                             )
@@ -247,12 +249,24 @@ fun MainActivityContent() {
                     item {
                         SegmentedListItem(
                             onClick = { selectedSample = 6 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 6, count = 7),
+                            shapes = ListItemDefaults.segmentedShapes(index = 6, count = 8),
                             colors = ListItemDefaults.segmentedColors(
                                 containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                             )
                         ) {
                             Text(text = "TextAutoSize")
+                        }
+                    }
+
+                    item {
+                        SegmentedListItem(
+                            onClick = { selectedSample = 7 },
+                            shapes = ListItemDefaults.segmentedShapes(index = 7, count = 8),
+                            colors = ListItemDefaults.segmentedColors(
+                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                            )
+                        ) {
+                            Text(text = "ScalableContent")
                         }
                     }
                 }
@@ -263,6 +277,7 @@ fun MainActivityContent() {
                 4 -> Sample05App(innerPadding)
                 5 -> Sample06App(innerPadding)
                 6 -> Sample07App(innerPadding)
+                7 -> Sample08App(innerPadding)
             }
         }
     }
