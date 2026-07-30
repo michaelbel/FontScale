@@ -182,6 +182,7 @@ fun MainActivityContent() {
                                 colors = ListItemDefaults.segmentedColors(
                                     containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                                 ),
+                                overlineContent = { Text(text = "Sample 01") },
                                 content = { Text(text = "ScaleInfo") }
                             )
                         }
@@ -192,6 +193,7 @@ fun MainActivityContent() {
                                 colors = ListItemDefaults.segmentedColors(
                                     containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                                 ),
+                                overlineContent = { Text(text = "Sample 02") },
                                 content = { Text(text = "SizeIn") }
                             )
                         }
@@ -202,6 +204,7 @@ fun MainActivityContent() {
                                 colors = ListItemDefaults.segmentedColors(
                                     containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                                 ),
+                                overlineContent = { Text(text = "Sample 03") },
                                 content = { Text(text = "FlowRow") }
                             )
                         }
@@ -212,6 +215,7 @@ fun MainActivityContent() {
                                 colors = ListItemDefaults.segmentedColors(
                                     containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                                 ),
+                                overlineContent = { Text(text = "Sample 04") },
                                 content = { Text(text = "WeightFill") }
                             )
                         }
@@ -222,6 +226,7 @@ fun MainActivityContent() {
                                 colors = ListItemDefaults.segmentedColors(
                                     containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                                 ),
+                                overlineContent = { Text(text = "Sample 05") },
                                 content = { Text(text = "BasicMarquee") }
                             )
                         }
@@ -232,6 +237,7 @@ fun MainActivityContent() {
                                 colors = ListItemDefaults.segmentedColors(
                                     containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                                 ),
+                                overlineContent = { Text(text = "Sample 06") },
                                 content = { Text(text = "FontScaleLimit") }
                             )
                         }
@@ -242,6 +248,7 @@ fun MainActivityContent() {
                                 colors = ListItemDefaults.segmentedColors(
                                     containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                                 ),
+                                overlineContent = { Text(text = "Sample 07") },
                                 content = { Text(text = "TextAutoSize") }
                             )
                         }
@@ -252,6 +259,7 @@ fun MainActivityContent() {
                                 colors = ListItemDefaults.segmentedColors(
                                     containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
                                 ),
+                                overlineContent = { Text(text = "Sample 08") },
                                 content = { Text(text = "ScalableContent") }
                             )
                         }
