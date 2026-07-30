@@ -67,6 +67,7 @@ fun Sample04App(
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.bodyLarge
                 )
+
                 Box(
                     modifier = Modifier
                         .sizeIn(minWidth = 32.dp, minHeight = 32.dp)
