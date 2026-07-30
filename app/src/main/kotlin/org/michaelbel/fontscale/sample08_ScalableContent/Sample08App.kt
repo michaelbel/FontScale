@@ -84,9 +84,7 @@ fun Sample08App(
                             onClick = {},
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Text(
-                                text = "Пример действия"
-                            )
+                            Text(text = "Пример действия")
                         }
                     }
                 }
