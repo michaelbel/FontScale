@@ -81,7 +81,6 @@ fun MainActivityContent() {
             modifier = Modifier
                 .fillMaxSize()
                 .nestedScroll(scrollBehavior.nestedScrollConnection),
-            contentWindowInsets = WindowInsets.safeDrawing,
             topBar = {
                 CompositionLocalProvider(
                     LocalDensity provides topBarDensity
@@ -166,107 +165,95 @@ fun MainActivityContent() {
                         }
                     }
                 }
-            }
+            },
+            contentWindowInsets = WindowInsets.safeDrawing
         ) { innerPadding ->
             when (selectedSample) {
-                null -> LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    contentPadding = innerPadding + PaddingValues(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(ListItemDefaults.SegmentedGap)
-                ) {
-                    item {
-                        SegmentedListItem(
-                            onClick = { selectedSample = 0 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 0, count = 8),
-                            colors = ListItemDefaults.segmentedColors(
-                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                null -> {
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        contentPadding = innerPadding + PaddingValues(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(ListItemDefaults.SegmentedGap)
+                    ) {
+                        item {
+                            SegmentedListItem(
+                                onClick = { selectedSample = 0 },
+                                shapes = ListItemDefaults.segmentedShapes(index = 0, count = 8),
+                                colors = ListItemDefaults.segmentedColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                                ),
+                                content = { Text(text = "ScaleInfo") }
                             )
-                        ) {
-                            Text(text = "ScaleInfo")
                         }
-                    }
-
-                    item {
-                        SegmentedListItem(
-                            onClick = { selectedSample = 1 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 1, count = 8),
-                            colors = ListItemDefaults.segmentedColors(
-                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                        item {
+                            SegmentedListItem(
+                                onClick = { selectedSample = 1 },
+                                shapes = ListItemDefaults.segmentedShapes(index = 1, count = 8),
+                                colors = ListItemDefaults.segmentedColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                                ),
+                                content = { Text(text = "SizeIn") }
                             )
-                        ) {
-                            Text(text = "SizeIn")
                         }
-                    }
-
-                    item {
-                        SegmentedListItem(
-                            onClick = { selectedSample = 2 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 2, count = 8),
-                            colors = ListItemDefaults.segmentedColors(
-                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                        item {
+                            SegmentedListItem(
+                                onClick = { selectedSample = 2 },
+                                shapes = ListItemDefaults.segmentedShapes(index = 2, count = 8),
+                                colors = ListItemDefaults.segmentedColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                                ),
+                                content = { Text(text = "FlowRow") }
                             )
-                        ) {
-                            Text(text = "FlowRow")
                         }
-                    }
-
-                    item {
-                        SegmentedListItem(
-                            onClick = { selectedSample = 3 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 3, count = 8),
-                            colors = ListItemDefaults.segmentedColors(
-                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                        item {
+                            SegmentedListItem(
+                                onClick = { selectedSample = 3 },
+                                shapes = ListItemDefaults.segmentedShapes(index = 3, count = 8),
+                                colors = ListItemDefaults.segmentedColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                                ),
+                                content = { Text(text = "WeightFill") }
                             )
-                        ) {
-                            Text(text = "WeightFill")
                         }
-                    }
-
-                    item {
-                        SegmentedListItem(
-                            onClick = { selectedSample = 4 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 4, count = 8),
-                            colors = ListItemDefaults.segmentedColors(
-                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                        item {
+                            SegmentedListItem(
+                                onClick = { selectedSample = 4 },
+                                shapes = ListItemDefaults.segmentedShapes(index = 4, count = 8),
+                                colors = ListItemDefaults.segmentedColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                                ),
+                                content = { Text(text = "BasicMarquee") }
                             )
-                        ) {
-                            Text(text = "BasicMarquee")
                         }
-                    }
-
-                    item {
-                        SegmentedListItem(
-                            onClick = { selectedSample = 5 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 5, count = 8),
-                            colors = ListItemDefaults.segmentedColors(
-                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                        item {
+                            SegmentedListItem(
+                                onClick = { selectedSample = 5 },
+                                shapes = ListItemDefaults.segmentedShapes(index = 5, count = 8),
+                                colors = ListItemDefaults.segmentedColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                                ),
+                                content = { Text(text = "FontScaleLimit") }
                             )
-                        ) {
-                            Text(text = "FontScaleLimit")
                         }
-                    }
-
-                    item {
-                        SegmentedListItem(
-                            onClick = { selectedSample = 6 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 6, count = 8),
-                            colors = ListItemDefaults.segmentedColors(
-                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                        item {
+                            SegmentedListItem(
+                                onClick = { selectedSample = 6 },
+                                shapes = ListItemDefaults.segmentedShapes(index = 6, count = 8),
+                                colors = ListItemDefaults.segmentedColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                                ),
+                                content = { Text(text = "TextAutoSize") }
                             )
-                        ) {
-                            Text(text = "TextAutoSize")
                         }
-                    }
-
-                    item {
-                        SegmentedListItem(
-                            onClick = { selectedSample = 7 },
-                            shapes = ListItemDefaults.segmentedShapes(index = 7, count = 8),
-                            colors = ListItemDefaults.segmentedColors(
-                                containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                        item {
+                            SegmentedListItem(
+                                onClick = { selectedSample = 7 },
+                                shapes = ListItemDefaults.segmentedShapes(index = 7, count = 8),
+                                colors = ListItemDefaults.segmentedColors(
+                                    containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                                ),
+                                content = { Text(text = "ScalableContent") }
                             )
-                        ) {
-                            Text(text = "ScalableContent")
                         }
                     }
                 }
