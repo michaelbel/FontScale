@@ -2,6 +2,10 @@
 
 package org.michaelbel.fontscale
 
+import androidx.compose.animation.SizeTransform
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -178,6 +182,8 @@ fun MainActivityContent() {
             NavDisplay(
                 backStack = backStack,
                 onBack = { backStack.removeLastOrNull() },
+                popTransitionSpec = { fadeIn() togetherWith fadeOut() using SizeTransform(clip = false) },
+                predictivePopTransitionSpec = { fadeIn() togetherWith fadeOut() using SizeTransform(clip = false) },
                 entryProvider = entryProvider {
                     entry<Home> {
                         LazyColumn(
