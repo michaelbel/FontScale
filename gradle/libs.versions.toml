@@ -10,6 +10,7 @@ androidx-activity = "1.13.0"
 androidx-compose-ui = "1.11.4"
 androidx-compose-material3 = "1.5.0-alpha25"
 androidx-core-splashscreen = "1.2.0"
+androidx-navigation3 = "1.1.5"
 
 [libraries]
 google-material = { module = "com.google.android.material:material", version.ref = "google-material" }
@@ -19,6 +20,8 @@ androidx-compose-material3 = { module = "androidx.compose.material3:material3", 
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "androidx-compose-ui" }
 androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "androidx-compose-ui" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "androidx-core-splashscreen" }
+androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "androidx-navigation3" }
+androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "androidx-navigation3" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
