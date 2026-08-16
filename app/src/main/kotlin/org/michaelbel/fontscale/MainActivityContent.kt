@@ -109,6 +109,7 @@ fun MainActivityContent() {
                             )
                         },
                         colors = TopAppBarDefaults.topAppBarColors(
+                            containerColor = MaterialTheme.colorScheme.background,
                             scrolledContainerColor = MaterialTheme.colorScheme.surfaceContainer
                         ),
                         scrollBehavior = scrollBehavior
